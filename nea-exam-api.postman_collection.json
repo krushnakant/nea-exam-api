@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "126220ce-430a-44e6-8405-5130ba0c273d",
+		"name": "nea-exam-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "1305012"
+	},
+	"item": [
+		{
+			"name": "student",
+			"item": [
+				{
+					"name": "get all students",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/students"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/students"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Dec 2023 09:43:35 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"studentID\": 2,\n        \"lname\": \"desai\",\n        \"fname\": \"paridhi\"\n    },\n    {\n        \"studentID\": 51,\n        \"lname\": \"desai\",\n        \"fname\": \"krushnakant\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get single student",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/students/2"
+					},
+					"response": [
+						{
+							"name": "response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/students/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Dec 2023 09:44:55 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"studentID\": 2,\n    \"lname\": \"desai\",\n    \"fname\": \"paridhi\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get single student by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/students/name/paridhi"
+					},
+					"response": []
+				},
+				{
+					"name": "create student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentID\": 1,\n    \"lname\": \"one\",\n    \"fname\": \"ek\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/students"
+					},
+					"response": []
+				},
+				{
+					"name": "update student",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"studentID\": 3,\n    \"lname\": \"three\",\n    \"fname\": \"tran updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/students"
+					},
+					"response": []
+				},
+				{
+					"name": "delete student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/students/3"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
